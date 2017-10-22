@@ -1,0 +1,38 @@
+{
+  "extends": "airbnb/base",
+  "plugins": [
+    "import"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": [1, "never"],
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+  	"import/no-extraneous-dependencies": 0,
+    "no-plusplus": 1,
+    "no-unused-vars": 1,
+    "no-param-reassign": 0,
+    "no-script-url": 0,
+    "func-names": 0,
+    "class-methods-use-this":0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "tools/webpack.development.js"
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "DEVELOPMENT": true,
+    "CLIENT": true,
+    "SERVER": true,
+    "DISABLE_SSR": true,
+    "webpackIsomorphicTools": true,
+    "assets": true
+  }
+}
